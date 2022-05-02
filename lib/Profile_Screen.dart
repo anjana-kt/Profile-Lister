@@ -48,9 +48,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         borderRadius: BorderRadius.circular(20.0),
                         child: FittedBox(
                           fit: BoxFit.none,
-                          child: Image.network(
+                          child: Image(
                             //image: NetworkImage(data['data'][index]['picture'].toString()),
-                            'https://randomuser.me/api/portraits/med/men/80.jpg',
+                            image: NetworkImage('https://randomuser.me/api/portraits/med/men/80.jpg'),
                             width: 200,
                             height: 200,
                           ),
