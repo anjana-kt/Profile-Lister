@@ -1,5 +1,5 @@
 import 'package:profile_lister/Network.dart';
-int limit = 5;
+int limit = 100;
 class ProfileData {
   String frontUrl='https://dummyapi.io/data/v1';
 
