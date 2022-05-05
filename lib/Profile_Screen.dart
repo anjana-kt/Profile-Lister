@@ -48,9 +48,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         borderRadius: BorderRadius.circular(20.0),
                         child: FittedBox(
                           fit: BoxFit.none,
-                          child: Image(
-                            //image: NetworkImage(data['data'][index]['picture'].toString()),
-                            image: NetworkImage('https://randomuser.me/api/portraits/med/men/80.jpg'),
+                          child: Image.network(data['data'][index]['picture'],
                             width: 200,
                             height: 200,
                           ),
@@ -84,11 +82,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                         ),
                         IconButton(
                           onPressed: () {
-
                             if (selcol[index] == Colors.blue)
                             {setState(() {
                               selcol[index] = Colors.grey;
-                              liked.removeAt(index);
+                              Data l = Data(data['data'][index]['title'],
+                                  data['data'][index]['firstName'],
+                                  data['data'][index]['lastName'],
+                                  data['data'][index]['picture'],
+                                  data['data'][index]['id']);
+                              liked.remove(l);
                             });
                             }
                             else
